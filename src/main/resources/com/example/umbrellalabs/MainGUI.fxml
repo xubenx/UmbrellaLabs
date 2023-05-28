@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Main">
+   <children>
+      <Button fx:id="btnCliente" layoutY="177.0" mnemonicParsing="false" onAction="#onCliente" prefHeight="46.0" prefWidth="230.0" text="Cliente">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="Analisis" layoutY="220.0" mnemonicParsing="false" onAction="#onAnalisis" prefHeight="46.0" prefWidth="230.0" text="Analisis">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnResultados" layoutY="132.0" mnemonicParsing="false" onAction="#onResultados" prefHeight="46.0" prefWidth="230.0" text="Resultados">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnOrden" layoutY="353.0" mnemonicParsing="false" onAction="#onOrden" prefHeight="46.0" prefWidth="230.0" text="Orden">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEstudio" layoutY="262.0" mnemonicParsing="false" onAction="#onEstudio" prefHeight="46.0" prefWidth="230.0" text="Estudio">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEstudioOrden" layoutY="393.0" mnemonicParsing="false" onAction="#onEstudioOrden" prefHeight="46.0" prefWidth="230.0" text="Estudios de ordenes">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutY="439.0" mnemonicParsing="false" onAction="#onReporte" prefHeight="46.0" prefWidth="230.0" text="Reportes">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAnalisisEstudio" layoutY="308.0" mnemonicParsing="false" onAction="#onAnalisisEstudio" prefHeight="46.0" prefWidth="230.0" text="Analisis de estudios">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="91.0" prefWidth="230.0" text="Umbrella">
+         <font>
+            <Font name="Rockwell Condensed" size="74.0" />
+         </font>
+      </Label>
+      <Label layoutX="174.0" layoutY="90.0" text="LABS">
+         <font>
+            <Font name="Segoe UI Light" size="21.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboCliente" layoutX="311.0" layoutY="132.0" prefHeight="25.0" prefWidth="272.0" promptText="Ingresar cliente" />
+      <Label layoutX="267.0" layoutY="136.0" text="Cliente" />
+      <Label layoutX="267.0" layoutY="157.0" text="Agregar estudios a la orden:" />
+      <ComboBox fx:id="comboEstudio" layoutX="267.0" layoutY="176.0" prefHeight="25.0" prefWidth="252.0" promptText="Agregar estudios" />
+      <Button fx:id="btnAddEstudio" layoutX="527.0" layoutY="176.0" mnemonicParsing="false" onAction="#onAddEstudio" text="Agregar" />
+      <Label layoutX="267.0" layoutY="212.0" text="Estudios:" />
+      <TableView fx:id="tableMain" layoutX="267.0" layoutY="229.0" prefHeight="129.0" prefWidth="319.0">
+        <columns>
+          <TableColumn fx:id="columnName" prefWidth="227.20001220703125" text="Nombre" />
+          <TableColumn fx:id="columnPrice" prefWidth="91.199951171875" text="Precio" />
+        </columns>
+      </TableView>
+      <Label layoutX="447.0" layoutY="363.0" text="Subtotal:" />
+      <Label layoutX="460.0" layoutY="391.0" text="IVA:" />
+      <Label layoutX="456.0" layoutY="425.0" text="Total:" />
+      <Label fx:id="labelSubtotal" layoutX="533.0" layoutY="363.0" text="\$0" />
+      <TextField fx:id="txtIVA" layoutX="517.0" layoutY="390.0" prefHeight="25.0" prefWidth="45.0" text="1.16" />
+      <Label fx:id="labelTotal" layoutX="533.0" layoutY="425.0" text="\$0" />
+      <Button fx:id="btnGenerate" layoutX="447.0" layoutY="450.0" mnemonicParsing="false" onAction="#onGenerate" prefHeight="25.0" prefWidth="139.0" text="Generar orden" />
+      <Button fx:id="btnRefresh" layoutX="524.0" layoutY="14.0" mnemonicParsing="false" onAction="#onRefresh" text="Refrescar" />
+   </children>
+</Pane>

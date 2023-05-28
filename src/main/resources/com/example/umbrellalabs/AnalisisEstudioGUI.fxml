@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="214.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AnalisisEstudioView">
+    <Label layoutX="21.0" layoutY="37.0" prefHeight="17.0" prefWidth="42.0" text="Estudio:" />
+    <ComboBox fx:id="idEstudio" layoutX="14.0" layoutY="71.0" onAction="#obtenerAnalisis" onDragDone="#obtenerAnalisis" prefHeight="25.0" prefWidth="229.0" promptText="Selecciona un estudio" />
+
+    <TableView fx:id="tableEstudio" layoutX="251.0" layoutY="7.0" prefHeight="201.0" prefWidth="297.0">
+        <columns>
+            <TableColumn fx:id="columnAnalisis" prefWidth="294.8000030517578" text="Analisis" />
+        </columns>
+    </TableView>
+   <Button fx:id="btnCrearAnalisisEstudio" layoutX="14.0" layoutY="175.0" mnemonicParsing="false" onAction="#onAnalisisEstudio" prefHeight="25.0" prefWidth="222.0" text="Relacionar estudios con analisis" />
+</Pane>

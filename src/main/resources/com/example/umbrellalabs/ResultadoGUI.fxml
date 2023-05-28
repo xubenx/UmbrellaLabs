@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="284.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ResultadosView">
+    <children>
+        <Label layoutX="35.0" layoutY="18.0" text="Orden:" />
+        <Label layoutX="34.0" layoutY="68.0" text="Estudio:" />
+        <Label layoutX="34.0" layoutY="116.0" text="Analisis:" />
+        <Label layoutX="34.0" layoutY="164.0" text="Resultado:" />
+        <ComboBox fx:id="textoAnalisis" disable="true" layoutX="35.0" layoutY="130.0" prefHeight="25.0" prefWidth="188.0" promptText="Analisis" />
+        <ComboBox fx:id="textoOrden" layoutX="34.0" layoutY="43.0" onAction="#filtrarAnalisis" prefHeight="25.0" prefWidth="188.0" promptText="Orden" />
+        <ComboBox fx:id="textoEstudio" disable="true" layoutX="34.0" layoutY="85.0" prefHeight="25.0" prefWidth="188.0" promptText="Estudio" />
+
+        <TextField fx:id="textoResultado" layoutX="34.0" layoutY="181.0" prefHeight="25.0" prefWidth="188.0" promptText="Resultado" />
+        <Button fx:id="botonEditar" layoutX="157.0" layoutY="228.0" mnemonicParsing="false" onAction="#clicEditar" prefHeight="25.0" prefWidth="66.0" text="Editar" />
+
+        <TableView fx:id="tableResultado" layoutX="246.0" layoutY="10.0" onMouseClicked="#obtenerResultados" prefHeight="243.0" prefWidth="583.0">
+            <columns>
+                <TableColumn fx:id="columnOrden" prefWidth="100.800048828125" text="Orden" />
+                <TableColumn fx:id="columnEstudio" prefWidth="173.60000610351562" text="Estudio" />
+
+                <TableColumn fx:id="columAnalisis" prefWidth="205.5999755859375" text="Analisis" />
+                <TableColumn fx:id="columnResultado" minWidth="0.0" prefWidth="102.20001220703125" text="Resultado" />
+            </columns>
+        </TableView>
+      <Button layoutX="38.0" layoutY="228.0" mnemonicParsing="false" onAction="#onRefresh" text="Refrescar" />
+    </children>
+</Pane>

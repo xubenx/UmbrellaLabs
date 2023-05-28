@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.OrdenView">
+    <children>
+        <Label layoutX="35.0" layoutY="18.0" text="RFC:" />
+        <Label layoutX="34.0" layoutY="68.0" text="Fecha:" />
+        <Label layoutX="35.0" layoutY="110.0" prefHeight="17.0" prefWidth="59.0" text="ID:" />
+        <Button fx:id="botonBorrar" layoutX="164.0" layoutY="301.0" mnemonicParsing="false" onAction="#clicBorrar" prefHeight="25.0" prefWidth="59.0" text="Borrar" />
+        <Label layoutX="35.0" layoutY="152.0" text="Subtotal:" />
+        <TextField fx:id="textoID" disable="true" layoutX="32.0" layoutY="127.0" prefHeight="25.0" prefWidth="188.0" />
+
+        <TextField fx:id="textoSubtotal" disable="true" layoutX="32.0" layoutY="175.0" prefHeight="25.0" prefWidth="188.0" />
+        <TextField fx:id="textoIVA" disable="true" layoutX="35.0" layoutY="221.0" prefHeight="25.0" prefWidth="188.0" />
+
+        <TableView fx:id="tableOrden" layoutX="249.0" layoutY="18.0" onMouseClicked="#obtenerOrden" prefHeight="308.0" prefWidth="798.0">
+            <columns>
+                <TableColumn fx:id="columnID" prefWidth="101.60006713867188" text="ID" />
+                <TableColumn fx:id="columnCliente" prefWidth="245.59994506835938" text="Cliente" />
+                <TableColumn fx:id="columnFecha" prefWidth="128.800048828125" text="Fecha" />
+                <TableColumn fx:id="columnSubtotal" prefWidth="108.79998779296875" text="Subtotal" />
+                <TableColumn fx:id="columnIVA" prefWidth="79.2000732421875" text="IVA" />
+                <TableColumn fx:id="columnTotal" prefWidth="132.19998168945312" text="Total" />
+
+            </columns>
+        </TableView>
+        <Button fx:id="btnClean" layoutX="110.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClean" prefHeight="25.0" prefWidth="113.0" text="Limpiar campos" />
+      <ComboBox fx:id="textoRFC" layoutX="32.0" layoutY="43.0" prefHeight="25.0" prefWidth="188.0" />
+      <DatePicker fx:id="textFecha" disable="true" layoutX="32.0" layoutY="85.0" prefHeight="25.0" prefWidth="188.0" />
+        <Label layoutX="36.0" layoutY="200.0" text="IVA:" />
+      <Label layoutX="36.0" layoutY="265.0" text="Total:" />
+      <Label fx:id="textoTotal" layoutX="121.0" layoutY="254.0" text="\$">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>

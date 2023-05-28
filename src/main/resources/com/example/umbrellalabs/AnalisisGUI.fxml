@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AnalisisView">
+    <children>
+        <Label layoutX="35.0" layoutY="18.0" text="ID:" />
+        <Label layoutX="34.0" layoutY="68.0" text="Nombre:" />
+        <TextField fx:id="textoID" editable="false" layoutX="35.0" layoutY="43.0" prefHeight="25.0" prefWidth="188.0" />
+        <TextField fx:id="textoNombre" layoutX="35.0" layoutY="85.0" prefHeight="25.0" prefWidth="188.0" />
+        <Label layoutX="34.0" layoutY="116.0" text="Límite Inferior:" />
+        <Label layoutX="34.0" layoutY="164.0" text="Límite Superior:" />
+        <TextField fx:id="textoLimInferior" layoutX="35.0" layoutY="133.0" prefHeight="25.0" prefWidth="188.0" />
+        <TextField fx:id="textoLimSuperior" layoutX="34.0" layoutY="181.0" prefHeight="25.0" prefWidth="188.0" />
+
+        <Button fx:id="botonAgregar" layoutX="35.0" layoutY="226.0" mnemonicParsing="false" onAction="#clicAgregar" prefHeight="25.0" prefWidth="59.0" text="Agregar" />
+        <Button fx:id="botonEditar" layoutX="96.0" layoutY="226.0" mnemonicParsing="false" onAction="#clicEditar" prefHeight="25.0" prefWidth="66.0" text="Editar" />
+        <Button fx:id="botonBorrar" layoutX="164.0" layoutY="226.0" mnemonicParsing="false" onAction="#clicBorrar" prefHeight="25.0" prefWidth="59.0" text="Borrar" />
+        <Button fx:id="btnLimpiar" layoutX="110.0" layoutY="14.0" mnemonicParsing="false" onAction="#clicClean" prefHeight="25.0" prefWidth="113.0" text="Limpiar campos" />
+
+        <TableView fx:id="tableAnalisis" layoutX="246.0" layoutY="10.0" onMouseClicked="#obtenerAnalisis" prefHeight="243.0" prefWidth="583.0">
+            <columns>
+                <TableColumn fx:id="columnID" prefWidth="79.99993896484375" text="ID" />
+                <TableColumn fx:id="columnNombre" prefWidth="297.60003662109375" text="Nombre" />
+                <TableColumn fx:id="columnLimInferior" prefWidth="100.800048828125" text="Límite Inferior" />
+                <TableColumn fx:id="columnLimSuperior" minWidth="0.0" prefWidth="102.20001220703125" text="Límite Superior" />
+            </columns>
+        </TableView>
+    </children>
+</Pane>

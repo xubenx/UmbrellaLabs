@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="214.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.EstudioOrdenView">
+
+    <Label layoutX="35.0" layoutY="14.0" text="Orden:" />
+    <ComboBox fx:id="idEstudio" layoutX="35.0" layoutY="38.0" onAction="#cambioBox" onDragDone="#cambioBox" prefHeight="25.0" prefWidth="188.0" promptText="Selecciona una orden" />
+
+    <TableView fx:id="tableEstudio" layoutX="251.0" layoutY="7.0" prefHeight="201.0" prefWidth="438.0">
+        <columns>
+            <TableColumn fx:id="columnID" prefWidth="85.0" text="Orden" />
+            <TableColumn fx:id="columnNombre" prefWidth="240.19998168945312" text="Estudio" />
+            <TableColumn fx:id="columnPrecio" prefWidth="110.20001220703125" text="Precio" />
+        </columns>
+    </TableView>
+</Pane>

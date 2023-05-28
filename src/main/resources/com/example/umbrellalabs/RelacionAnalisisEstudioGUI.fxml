@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="226.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RelacionesView">
+   <children>
+      <TableView fx:id="tableAnalisis" layoutX="185.0" layoutY="14.0" onMouseClicked="#obtenerAnalisis" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="columnAnalisiss" prefWidth="196.1999969482422" text="Analisis" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="comboEstudio" layoutX="14.0" layoutY="14.0" prefWidth="150.0" promptText="Escoger estudio" />
+      <Button fx:id="btnAdd" layoutX="14.0" layoutY="159.0" mnemonicParsing="false" onAction="#onAdd" prefHeight="25.0" prefWidth="150.0" text="Agregar relación" />
+      <Button fx:id="btnDelete" layoutX="14.0" layoutY="189.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="25.0" prefWidth="150.0" text="Quitar relación" />
+   </children></Pane>
